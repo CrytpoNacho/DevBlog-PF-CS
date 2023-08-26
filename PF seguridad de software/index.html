@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="estilos/styles.css">
+  <title>Developer Blog Platform</title>
+</head>
+<body>
+  <header>
+    <h1>Developer Blog Platform</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a id="login-link" href="login.html">inicar Sesion</a></li>
+        <li><a href="Honeypots.html">Honey Pots</a></li>
+        <li><a href="Firewall.html">Firewall</a></li>
+        <li><a href="loadbal.html">Load Balancer</a></li>
+        <li><a href="detectorint.html">Detector de intrusos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="featured-post">
+      <article class="blog-post">
+        <h2>Publicación destacada</h2>
+        <p>Descubre las últimas tendencias en desarrollo web...</p>
+        <p>Autor: Admin</p>
+        <p>Fecha: 2023-07-26</p>
+        <a href="#">Leer más</a>
+      </article>
+    </section>
+  
+    <section class="recent-posts">
+      <h2>Publicaciones recientes</h2>
+      <div class="blog-posts">
+        <!-- Aquí se mostrarían las publicaciones recientes -->
+      </div>
+  
+     <!-- Formulario de publicación
+<div class="post-form">
+    <h3 id="h3form1">Crear nueva publicación</h3>
+    <input type="text" id="post-author" placeholder="Nombre del autor">
+    <input type="date" id="post-date">
+    <input type="text" id="post-title" placeholder="Título de la publicación">
+    <textarea id="post-content" placeholder="Contenido de la publicación"></textarea>
+    <input type="file" id="image-input" accept="image/*" multiple>
+    <div id="selected-images"></div> <!- Mostrar imágenes seleccionadas --
+    <textarea id="html-code" placeholder="Código HTML"></textarea>
+    <textarea id="css-code" placeholder="Código CSS"></textarea>
+    <textarea id="js-code" placeholder="Código JavaScript"></textarea>
+    <button id="submit-post">Publicar</button>
+  </div>
+  
+-->
+ <!-- Contenedor para la publicación ampliada -->
+<div class="expanded-post" id="expanded-post">
+    <div class="expanded-content">
+      <button id="collapse-button"></button>
+      <h2></h2>
+      <p>Autor: </p>
+      <p>Fecha: </p>
+      <p></p> <!-- Contenido de la publicación -->
+      <div class="expanded-images"></div>
+      <h3>Definicion</h3>
+      <pre class="code-block"></pre>
+      <h3>Funciones</h3>
+      <pre class="code-block"></pre>
+      <h3>Instalacion</h3>
+      <pre class="code-block"></pre>
+    </div>
+  </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Developer Blog Platform</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
+  <script>
+    
+    // Ejemplo de datos de publicaciones
+const posts = [
+{
+  title: "Como instalar Honey pots",
+  content: "Honey pots para 'Hackear' a los 'Hackers'",
+  author: "Ignacio González",
+  date: "2023-06-10",
+  images: [],
+  Definicion: "Un 'honeypot' (en español, 'olla de miel' o 'trampa de miel'), se refiere a una técnica utilizada para detectar, rastrear o desviar a posibles atacantes cibernéticos. Consiste en crear sistemas, redes o aplicaciones que parecen ser objetivos atractivos para los atacantes, pero en realidad están diseñados para recopilar información sobre los métodos, técnicas y herramientas utilizadas por los atacantes, así como para observar sus acciones sin que se den cuenta.",
+  Funciones: "1/ Identificación de amenazas: Al observar cómo los atacantes interactúan con un honeypot, los expertos en seguridad pueden identificar nuevas amenazas y patrones de ataque. 2/ Recopilación de información: Los honeypots permiten a los investigadores recopilar información sobre las tácticas y herramientas utilizadas por los atacantes, lo que puede ayudar en la mejora de las defensas de seguridad. 3/Reducción de riesgos: Al atraer a los atacantes hacia un entorno controlado, se puede reducir el riesgo de que ataquen sistemas reales. 4/Investigación forense: Los datos recopilados de los honeypots pueden ser utilizados en investigaciones forenses para comprender cómo ocurrió un ataque y qué información fue comprometida.",
+  Instalacion: "",
+},
+{
+  title: "Como instalar un Load Balancer",
+  content: "Un Load Balancer sirve para distribuir la carga entre varios servidores web que alojen la plataforma",
+  author: "Nidia Sandoval",
+  date: "2023-07-12",
+  images: [],
+  Definicion: "Un balanceador de carga (load balancer en inglés) es un componente esencial en la arquitectura de sistemas que distribuye el tráfico de red entrante entre múltiples servidores o recursos, con el objetivo de mejorar el rendimiento, la disponibilidad y la escalabilidad de una aplicación web o servicio en línea. Su función principal es asegurar que ningún servidor se vea abrumado por una carga excesiva, lo que puede conducir a tiempos de respuesta lentos o a la caída del servicio. En esencia, un balanceador de carga 'equilibra' la carga de trabajo entre varios servidores, permitiendo un mejor rendimiento y una mayor tolerancia a fallos.",
+  Funciones: "1/Recepción del Tráfico: Cuando un cliente realiza una solicitud a la aplicación web, esta solicitud llega primero al balanceador de carga. 2/Distribución de la Carga: El balanceador de carga evalúa la carga actual de los servidores disponibles y decide a cuál de ellos dirigir la solicitud. Esto se puede hacer de varias maneras, como en función de la carga actual, utilizando un algoritmo de round-robin (rotación) o considerando otros factores como la latencia. 3/Redirección de la Solicitud: El balanceador de carga redirige la solicitud del cliente al servidor seleccionado para manejarla. 4/Procesamiento de la Solicitud: El servidor seleccionado procesa la solicitud y envía la respuesta de vuelta al cliente a través del balanceador de carga.",
+  Instalacion: "Existen diferentes tipos de balanceadores de carga, incluyendo balanceadores de carga hardware, software y servicios en la nube. Para la instalación de un balanceador de carga en una web, te centrarás en las opciones de software, que suelen ser más flexibles y escalables. Puedes usar soluciones como: 1-Nginx: Un servidor web y proxy inverso que también puede funcionar como balanceador de carga. 2-HAProxy: Un balanceador de carga y proxy TCP/HTTP de alto rendimiento. 3-Apache HTTP Server: Además de ser un servidor web, Apache puede configurarse como un balanceador de carga mediante el módulo mod_proxy.",
+  videos: ""
+},
+{
+  title: "Por que se debe instalar un Firewall?",
+  content: "La importancia de los firewalls en las aplicaciones web...",
+  author: "Andres Arce",
+  date: "2023-06-24",
+  images: [],
+  Definicion: " Un Firewall se emplea tanto en grandes como en pequeñas redes para ofrecer seguridad frente a accesos no autorizados a la red interna. Normalmente, se trata de un equipo, ordenador o programa conectado en un sitio estratégico, que evita la entrada de determinada información que puede ser dañina para la red. En otras palabras, es simplemente un filtro que controla todas las comunicaciones que pasan de una red a otra, y en función de lo que sea, permite o deniega su paso. Para permitir o denegar una comunicación el Firewall examina el tipo de servicio al que corresponde, como puede ser el web, el correo, entre otros. Dependiendo del servicio, el firewall decide si lo permite o no. Además, el cortafuegos examina si la comunicación es entrante o saliente y dependiendo de su dirección puede permitirla. ",
+  Funciones: "1.Crear una barrera que permita o bloquee intentos para acceder a la información en su equipo. 2.Evitar usuarios no autorizados accedan a los equipos y las redes de la organización que se conectan a Internet. 3.Supervisar la comunicación entre equipos y otros equipos en Internet. 4.Visualizar y bloquear aplicaciones que puedan generar riesgos 5.Advertir de intentos de conexión desde otros equipos.6.Advertir ir de intentos de conexión mediante las aplicaciones en su equipo que se conectan a otros equipos.7.Detectar aplicaciones y actualizar rutas para añadir futuras fuentes de información 8.Hacer frente a los cambios en las amenazas para la seguridad", 
+  Instalacion: "'https://www.youtube.com/watch?v=4if3lr6rhO8&t=334s'>Video de como instalar un WAF<, parte 2 del video: 'https://www.youtube.com/watch?v=wmz_6I7Atsw'>Parte 2 instalar un WAF<",
+  videos: ""
+},
+{
+  title: "Como instalar un Detector de intrusos",
+  content: "La detección de intrusos es vital para monitorear el tráfico y detectar patrones de actividad maliciosa",
+  author: "Josue Redondo",
+  date: "2023-07-25",
+  images: [],
+  Definicion: "Realización de detección de intrusiones en la red con Azure Network Watcher y herramientas de código abierto: Las capturas de paquetes son un componente clave de la implementación de sistemas de detección de intrusiones de red (IDS) y de la ejecución de supervisión de seguridad de la red (NSM). Existen varias herramientas IDS de código abierto que procesan las capturas de paquetes y buscan firmas de posibles intrusiones y actividad malintencionada. Con las capturas de paquetes que proporciona Network Watcher, puede analizar la red en busca de intrusiones o vulnerabilidades de carácter dañino. Una de esas herramientas de código abierto es Suricata, un motor de IDS que usa conjuntos de reglas para supervisar el tráfico de red y desencadenar alertas cuando se produce algún evento sospechoso. Suricata ofrece un motor multiproceso, lo que significa que puede realizar el análisis del tráfico de red con una mayor velocidad y eficiencia. Para más información sobre Suricata y sus funcionalidades, visite este sitio web en https://suricata.io/. ",
+  Funciones: "Instalar un detector de intrusos en una página web es una medida crítica para fortalecer la seguridad y asegurar la integridad de la plataforma en línea. Estas herramientas, también conocidas como sistemas de detección de intrusos (IDS), cumplen una serie de funciones esenciales para garantizar que la página web esté protegida contra amenazas y actividades maliciosas. En primer lugar, un IDS se encarga de la detección continua de actividades sospechosas. Monitoriza constantemente el tráfico y las acciones en la página web en busca de patrones o comportamientos anómalos. Su objetivo es identificar intentos de acceso no autorizado, actividades inusuales en los archivos del sistema y cambios imprevistos en la configuración. Otra función primordial de un IDS es la identificación de ataques conocidos. Estos sistemas están configurados para reconocer patrones específicos de ataques que ya han sido documentados. Pueden detectar inyecciones de código SQL, intentos de cross-site scripting (XSS), exploración de puertos y otras técnicas comúnmente empleadas por los atacantes. El IDS también desempeña un papel crucial en las notificaciones y alertas. En caso de detectar una actividad sospechosa o un posible ataque, genera alertas o notificaciones para informar a los administradores. Estas alertas pueden ser enviadas por correo electrónico, mensajes de texto u otros medios de comunicación, permitiendo a los administradores tomar medidas inmediatas.Además de las alertas, algunos IDS están configurados para una prevención activa. En otras palabras, pueden tomar medidas inmediatas ante actividades maliciosas. Esto puede incluir bloquear direcciones IP, cerrar conexiones o implementar otras acciones para detener el ataque en curso y proteger la página web. Los IDS también ofrecen una función de auditoría y análisis. Registran y almacenan registros detallados de eventos y actividades. Estos registros resultan valiosos para la auditoría de seguridad y el análisis forense. Ayudan a comprender cómo se desarrolló un ataque y qué partes de la página web fueron comprometidas. Además, los IDS deben mantenerse actualizados con las últimas firmas y patrones de ataque para asegurar que puedan identificar las amenazas más recientes. Esto implica actualizar regularmente la base de datos de firmas y ajustar la configuración del IDS según las tendencias cambiantes de ciberataques.",
+  Instalacion: "sudo add-apt-repository ppa:oisf/suricata-stable / sudo apt-get updatesudo apt-get install suricata // Psao 2: wget https://rules.emergingthreats.net/open/suricata/emerging.rules.tar.gz tar zxf emerging.rules.tar.gz sudo cp -r rules /etc/suricata/ // Paso 3: sudo suricata -c /etc/suricata/suricata.yaml -r <location_of_pcapfile> // Paso 4: tail -f /var/log/suricata/fast.log",
+}
+// Agrega más publicaciones aquí
+];
+
+// Función para mostrar las publicaciones en la página
+function displayPosts() {
+const blogPosts = document.querySelector(".blog-posts");
+
+blogPosts.innerHTML = ''; // Limpia el contenido previo antes de mostrar las publicaciones
+
+posts.forEach((post, index) => {
+  const postElement = document.createElement("article");
+  postElement.classList.add("blog-post");
+
+  postElement.innerHTML = `
+    <h2>${post.title}</h2>
+    <p>${post.content}</p>
+    <p>Autor: ${post.author}</p>
+    <p>Fecha: ${post.date}</p>
+    <a href="#" class="expand-button" data-index="${index}">Leer más</a>
+  `;
+
+  blogPosts.appendChild(postElement);
+});
+}
+
+// Llama a la función para mostrar las publicaciones
+displayPosts();
+
+// Manejo del evento para mostrar la publicación ampliada
+document.addEventListener("click", function(event) {
+if (event.target && event.target.classList.contains("expand-button")) {
+  const postIndex = event.target.getAttribute("data-index");
+  const post = posts[postIndex];
+  const expandedPost = document.getElementById("expanded-post");
+  const expandedContent = expandedPost.querySelector(".expanded-content");
+  const codeBlocks = expandedContent.querySelectorAll(".code-block");
+
+  expandedContent.querySelector("h2").textContent = post.title;
+  expandedContent.querySelector("p").textContent = post.content;
+
+
+
+  // Limpia el contenido previo antes de mostrar las imágenes y el código
+  expandedContent.querySelector(".expanded-images").innerHTML = "";
+  codeBlocks[0].textContent = "";
+  codeBlocks[1].textContent = "";
+  codeBlocks[2].textContent = "";
+
+  for (const image of post.images) {
+    const imageElement = document.createElement("img");
+    imageElement.src = image;
+    imageElement.alt = "Imagen relacionada";
+    expandedContent.querySelector(".expanded-images").appendChild(imageElement);
+  }
+
+  codeBlocks[0].textContent = post.Definicion;
+  codeBlocks[1].textContent = post.Funciones;
+  codeBlocks[2].textContent = post.Instalacion;
+
+  expandedPost.style.display = "block";
+}
+});
+
+// Manejo del evento para cerrar la publicación ampliada
+document.getElementById("collapse-button").addEventListener("click", function() {
+const expandedPost = document.getElementById("expanded-post");
+expandedPost.style.display = "none";
+});
+
+// Función para crear una nueva publicación
+function createPost(title, content, author, htmlCode, cssCode, jsCode) {
+const newPost = {
+  title: title,
+  content: content,
+  author: author,
+  date: new Date().toISOString().slice(0, 10), // Formato: YYYY-MM-DD
+  images: [], // Almacena las rutas de las imágenes
+  htmlCode: htmlCode,
+  cssCode: cssCode,
+  jsCode: jsCode,
+};
+
+// Obtiene las rutas de las imágenes seleccionadas
+const imageElements = document.querySelectorAll(".selected-image");
+imageElements.forEach((imageElement) => {
+  newPost.images.push(imageElement.src);
+});
+
+posts.push(newPost);
+}
+
+// Manejo del evento para el campo de carga de imágenes
+document.getElementById("image-input").addEventListener("change", function(event) {
+const selectedImagesDiv = document.getElementById("selected-images");
+// No limpies el contenido anterior, simplemente agrega nuevas imágenes
+
+const images = event.target.files;
+for (const image of images) {
+  const imageDiv = document.createElement("div");
+  const imageElement = document.createElement("img");
+  imageElement.src = URL.createObjectURL(image); // Crea una URL temporal para la imagen
+  imageElement.alt = image.name; // Utiliza el nombre del archivo como texto alternativo
+  imageElement.classList.add("selected-image");
+  imageDiv.appendChild(imageElement);
+  selectedImagesDiv.appendChild(imageDiv);
+}
+});
+
+// Manejo del evento para la publicación
+document.getElementById("submit-post").addEventListener("click", function() {
+const title = document.getElementById("post-title").value;
+const content = document.getElementById("post-content").value;
+const author = "Usuario"; // Reemplaza esto con la lógica de autenticación
+const htmlCode = document.getElementById("html-code").value;
+const cssCode = document.getElementById("css-code").value;
+const jsCode = document.getElementById("js-code").value;
+
+if (title && content) {
+  createPost(title, content, author, htmlCode, cssCode, jsCode);
+  // Limpia los campos después de la publicación
+  document.getElementById("post-title").value = "";
+  document.getElementById("post-content").value = "";
+  // Limpia las imágenes seleccionadas
+  document.getElementById("image-input").value = "";
+  document.getElementById("selected-images").innerHTML = "";
+  // Limpia los códigos
+  document.getElementById("html-code").value = "";
+  document.getElementById("css-code").value = "";
+  document.getElementById("js-code").value = "";
+  // Vuelve a mostrar las publicaciones actualizadas
+  displayPosts();
+}
+}); //
+// Manejo del evento para el enlace de inicio de sesión
+document.getElementById("login-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita que se produzca la acción predeterminada del enlace
+    // Redirige al usuario a la página de inicio de sesión
+    window.location.href = "login.html";
+  });
+  
+</script>
+</body>
+</html>

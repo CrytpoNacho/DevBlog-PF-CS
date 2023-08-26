@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/styles.css">
+  <title>Explicación de Firewalls</title>
+</head>
+<body>
+  <header>
+    <h1>Importancia de los Firewalls en la Seguridad Web</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="honeypots.html">Honey Pots</a></li>
+        <li><a href="firewall.html">Firewall</a></li>
+        <li><a id="login-link" href="login.html">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature-section">
+      <h2>Firewalls: Protegiendo tu Aplicación Web</h2>
+      <p>En esta sección, exploraremos cómo un firewall puede fortalecer la seguridad de tu aplicación web y protegerla de ataques maliciosos.</p>
+    </section>
+  
+    <section class="content-section">
+      <h2>¿Qué es un Firewall Web?</h2>
+      <p>Un <strong>Firewall de Aplicación Web (WAF)</strong> es una barrera de seguridad entre tu aplicación web y posibles amenazas. Actúa como un filtro que monitorea y bloquea el tráfico malicioso antes de que llegue a tu servidor.</p>
+    </section>
+  
+    <section class="content-section">
+      <h2>Funciones Clave de un WAF</h2>
+      <p>Un WAF ofrece diversas funciones esenciales:</p>
+      <ul>
+        <li>Detección de Inyecciones SQL y XSS.</li>
+        <li>Bloqueo de intentos de acceso no autorizados.</li>
+        <li>Protección contra ataques de fuerza bruta.</li>
+        <li>Prevención de ataques de denegación de servicio (DDoS).</li>
+      </ul>
+    </section>
+  
+    <section class="content-section">
+      <h2>Por qué un Firewall es Vital</h2>
+      <p>Los ataques a aplicaciones web son cada vez más sofisticados. Un firewall web es vital para:</p>
+      <ul>
+        <li>Mantener la confidencialidad de los datos.</li>
+        <li>Evitar la exposición de vulnerabilidades conocidas.</li>
+        <li>Prevenir pérdidas financieras y de reputación.</li>
+        <li>Defenderse contra amenazas emergentes.</li>
+      </ul>
+    </section>
+    <button id="back-button">Volver al Inicio</button>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Developer Blog Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById("back-button").addEventListener("click", function() {
+      window.location.href = "index2.html";
+  });
+  </script>
+
+  <style>
+    /* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Secciones de contenido */
+.feature-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.feature-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-section {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.content-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Estilos para los enlaces */
+a {
+  color: #0074D9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056A0;
+}
+  </style>
+</body>
+</html>

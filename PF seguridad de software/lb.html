@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/styles.css">
+  <title>Load Balancer - Developer Blog Platform</title>
+</head>
+<body>
+  <header class="lb-header">
+    <h1>Load Balancer</h1>
+  </header>
+
+  <main class="lb-main">
+    <div class="load-balancer">
+      <div class="server" id="server1">1</div>
+      <div class="server" id="server2">2</div>
+      <div class="server" id="server3">3</div>
+      <div class="server" id="server4">4</div>
+      <div class="server" id="server5">5</div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const servers = document.querySelectorAll(".server");
+        const randomIndex = Math.floor(Math.random() * servers.length); // Número aleatorio entre 0 y 4
+    
+        for (let i = 0; i < servers.length; i++) {
+            if (i === randomIndex) {
+                servers[i].classList.add("active");
+    
+                const numberElement = document.createElement("div");
+                numberElement.classList.add("number");
+                numberElement.textContent = i + 1; // Sumamos 1 para mostrar el número correcto
+                servers[i].appendChild(numberElement);
+            } else {
+                servers[i].style.display = "none"; // Oculta los servidores no seleccionados
+            }
+        }
+    
+        setTimeout(() => {
+            window.location.href = "Firewall.html";
+        }, 3500); // Redirige después de 3.5 segundos
+    });
+    
+      
+  </script>
+
+  
+  <footer class="lb-footer">
+    <p>&copy; 2023 Developer Blog Platform</p>
+  </footer>
+</body>
+</html>

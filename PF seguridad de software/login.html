@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/styles.css">
+  <title>Iniciar Sesión - Developer Blog Platform</title>
+  <style>
+    .loading-container {
+      display: none;
+      text-align: center;
+    }
+
+    .loading-bar {
+      width: 0;
+      height: 20px;
+      background-color: green;
+      transition: width 3s;
+    }
+  </style>
+</head>
+<body>
+  <header class="login-header">
+    <h1>Iniciar Sesión</h1>
+  </header>
+
+  <main class="login-main">
+    <form id="login-form" class="login-form">
+      <label for="username" class="login-label">Nombre de Usuario:</label>
+      <input type="text" id="username" name="username" class="login-input" required>
+      
+      <label for="password" class="login-label">Contraseña:</label>
+      <input type="password" id="password" name="password" class="login-input" required>
+      
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+      <button id="back-button">Volver al Inicio</button>
+    </form>
+
+    <!-- Contenedor de la animación de carga -->
+    <div class="loading-container">
+      <p>El Firewall está trabajando en revisar tu petición...</p>
+      <div class="loading-bar"></div>
+      <p id="loading-text">Cargando...</p>
+    </div>
+  </main>
+  
+  <footer class="login-footer">
+    <p>&copy; 2023 Developer Blog Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById("back-button").addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
+
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Oculta el formulario y muestra la animación de carga
+        document.getElementById("login-form").style.display = "none";
+        document.querySelector(".loading-container").style.display = "block";
+
+        // Simula el proceso de revisión del Firewall con una animación de barra de carga
+        const loadingBar = document.querySelector(".loading-bar");
+        const loadingText = document.getElementById("loading-text");
+
+        let width = 0;
+        const interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+                loadingText.textContent = "Todo parece estar bien, te estamos redirigiendo a la página...";
+                setTimeout(() => {
+                    // Agrega aquí la redirección a lb.html
+                    window.location.href = "lb.html";
+                }, 8000); // Redirección después de 4 segundos (ajusta el tiempo según tus necesidades)
+            } else {
+                width += 10;
+                loadingBar.style.width = width + "%";
+            }
+        }, 300); // Cambia el intervalo de actualización según tus necesidades
+    });
+  </script>
+</body>
+</html>
+
+
+
+

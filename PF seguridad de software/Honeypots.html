@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/styles.css">
+  <title>Explicación de Honey Pots</title>
+</head>
+<body>
+  <header>
+    <h1>Honey Pots: Detectando y Rastreando Atacantes</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="honeypots.html">Honey Pots</a></li>
+        <li><a href="firewall.html">Firewall</a></li>
+        <li><a id="login-link" href="login.html">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature-section">
+      <h2>Utilizando Honey Pots para la Seguridad Web</h2>
+      <p>Exploraremos cómo los Honey Pots pueden ser una herramienta efectiva para detectar, rastrear y desviar a posibles atacantes cibernéticos.</p>
+    </section>
+  
+    <section class="content-section">
+      <h2>¿Qué son los Honey Pots?</h2>
+      <p>Los <strong>Honey Pots</strong> son sistemas, aplicaciones o redes diseñadas para parecer atractivas a los atacantes. Son utilizados para recopilar información sobre métodos, técnicas y herramientas de ataque, sin comprometer la seguridad de sistemas reales.</p>
+    </section>
+  
+    <section class="content-section">
+      <h2>Funciones Clave de los Honey Pots</h2>
+      <p>Los Honey Pots ofrecen varias funciones esenciales:</p>
+      <ul>
+        <li>Detección temprana de ataques.</li>
+        <li>Recopilación de datos sobre tácticas de ataque.</li>
+        <li>Desvío de atacantes lejos de sistemas reales.</li>
+        <li>Mejora de la comprensión de amenazas emergentes.</li>
+      </ul>
+    </section>
+  
+    <section class="content-section">
+      <h2>Por qué son Relevantes los Honey Pots</h2>
+      <p>Los Honey Pots desempeñan un papel crucial en la seguridad de aplicaciones web al:</p>
+      <ul>
+        <li>Identificar nuevas amenazas y patrones de ataque.</li>
+        <li>Proteger sistemas reales al atraer atacantes hacia entornos controlados.</li>
+        <li>Contribuir a la investigación forense y mejora de defensas.</li>
+      </ul>
+    </section>
+    <button id="back-button">Volver al Inicio</button>
+    <button id="quick-login-button">Iniciar Sesión Rápido</button>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Developer Blog Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById("back-button").addEventListener("click", function() {
+      window.location.href = "index2.html";
+    });
+
+    var respuesta = confirm("¿Quieres iniciar sesión de forma Diferente?");
+
+if (respuesta) {
+  // Agrega aquí la lógica para iniciar sesión de forma rápida
+  alert("Has aceptado iniciar sesión Diferente?");
+  window.location.href = "hpxd.html";
+} else {
+  alert("Has rechazado la opción de iniciar sesión diferente");
+}
+
+  </script>
+</body>
+</html>
+
+<style>
+  /* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Secciones de contenido */
+.feature-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.feature-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-section {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.content-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Estilos para los enlaces */
+a {
+  color: #0074D9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056A0;
+}
+</style>

@@ -1,0 +1,309 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #969393;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  footer {
+    background-color: #969393;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Estilos para las publicaciones */
+  .blog-post {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px; /* Agregado para bordes redondeados */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Agregado para sombra */
+    
+  }
+  
+  .blog-post h2 {
+    margin-top: 0;
+  }
+  
+  .blog-post p {
+    margin: 0;
+  }
+  
+  .blog-post a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  /* ... (estilos previos) ... */
+
+/* Estilos para las secciones */
+.featured-post {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.featured-post h2 {
+  color: #333;
+}
+
+.recent-posts {
+  padding: 2rem;
+}
+
+.recent-posts h2 {
+  margin-top: 0;
+}
+
+/* Estilos para las publicaciones recientes */
+.recent-posts .blog-post {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-form {
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  width: 40%;
+  margin-left: 30%;
+  padding: 1rem; /* Agregado para espaciado interno */
+  border-radius: 10px; /* Agregado para bordes redondeados */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Agregado para sombra */
+}
+
+.post-form h3 {
+  margin-top: 0;
+}
+
+.post-form input,
+.post-form textarea,
+.post-form button {
+  display: block;
+  width: 60%;
+  margin-bottom: 1rem;
+  margin-left: 20%;
+}
+
+#h3form1{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.selected-image {
+  max-width: 50%; /* Ajusta el tamaño máximo de la imagen */
+  max-height: 50%; /* Ajusta la altura máxima de la imagen */
+  margin: 10px;
+  display: block; /* Asegura que las imágenes se muestren una debajo de la otra */
+}
+
+
+/* Estilos para la ventana ampliada */
+.expanded-post {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+}
+
+.expanded-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  max-height: 80%; /* Limita la altura máxima del contenedor ampliado */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical solo al contenedor */
+}
+
+.expanded-content h2 {
+  margin-top: 0;
+}
+
+.expanded-content p {
+  margin-bottom: 10px;
+}
+
+.expanded-images img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los bloques de código */
+.code-block{
+  max-height: 150px; /* Altura máxima de los bloques de código */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando es necesario */
+  background-color: #bdb3b398; /* Color de fondo gris para los bloques de código */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno para los bloques de código */
+  margin-bottom: 20px;
+  margin: 0;
+  white-space: pre-wrap; /* Permite el ajuste automático de líneas */
+  font-family: Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333; /* Color del texto de código */
+}
+
+
+#collapse-button {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Mueve el botón de cerrar al lado derecho */
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos para el botón de cerrar */
+#collapse-button::after {
+  content: "X";
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.login-main {
+  max-width: 400px;
+  margin: 2rem auto; /* Añadido margen superior e inferior */
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-label {
+  margin-top: 10px;
+}
+
+.login-input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-button {
+  background-color: #06ce35;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.login-button:hover {
+  background-color: #38dbad;
+}
+
+.login-footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333333;
+  color: white;
+}
+
+#back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+#back-button:hover {
+  background-color: #e72020;
+}
+
+#back-button:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Load balancer */
+.load-balancer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.server {
+  width: 100px; /* Ancho de las bolas */
+  height: 100px; /* Alto de las bolas */
+  background-color: #3498db;
+  border-radius: 50%;
+  margin: 0 10px;
+  opacity: 0.5;
+  animation: bounce 2s infinite;
+}
+
+.server.active {
+  opacity: 1;
+  background-color: #3498db; /* Color azul más fuerte */
+  color: #ffffff; /* Texto en blanco */
+}
+
+.number {
+  text-align: center; /* Centrar el número */
+  font-size: 18px; /* Tamaño de fuente para el número */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

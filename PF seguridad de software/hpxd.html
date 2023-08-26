@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/styles.css">
+  <title>Iniciar Sesión - Developer Blog Platform</title>
+  <style>
+    .loading-container {
+      display: none;
+      text-align: center;
+    }
+
+    .loading-bar {
+      width: 0;
+      height: 20px;
+      background-color: green;
+      transition: width 3s;
+    }
+  </style>
+</head>
+<body>
+  <header class="login-header">
+    <h1>Inicio de sesión TRAMPA </h1>
+  </header>
+
+  <main class="login-main">
+    <form id="login-form" class="login-form">
+      <label for="username" class="login-label">Nombre de Usuario:</label>
+      <input type="text" id="username" name="username" class="login-input" required>
+      
+      <label for="password" class="login-label">Contraseña:</label>
+      <input type="password" id="password" name="password" class="login-input" required>
+      
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+      <button id="back-button">Volver al Inicio</button>
+    </form>
+
+    <h1>Aqui se comieron un Honey Pot por buscar iniciar sesion de forma diferente?</h1>
+    <p>Este formulario no lleva a ningun lado y busca recopilar informacion de que tipo de ataques intentan realizar como SQL injections </p>
